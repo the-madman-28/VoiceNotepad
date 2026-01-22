@@ -1,0 +1,95 @@
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+  --muted: #444;
+  --border: #dddddd;
+  --btn-bg: #ffffff;
+  --btn-text: #111111;
+  --btn-border: #cccccc;
+  --primary-bg: #111111;
+  --primary-text: #ffffff;
+  --danger-bg: #c62828;
+  --danger-text: #ffffff;
+  --shadow: rgba(0,0,0,0.06);
+}
+
+[data-theme="dark"] {
+  --bg: #0f1115;
+  --text: #e8e8e8;
+  --muted: #bbb;
+  --border: #2a2f3a;
+  --btn-bg: #141824;
+  --btn-text: #e8e8e8;
+  --btn-border: #2a2f3a;
+  --primary-bg: #e8e8e8;
+  --primary-text: #0f1115;
+  --danger-bg: #ff4d4d;
+  --danger-text: #0f1115;
+  --shadow: rgba(0,0,0,0.25);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 12px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+button, select {
+  padding: 8px 12px;
+  border: 1px solid var(--btn-border);
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button.primary {
+  border: none;
+  background: var(--primary-bg);
+  color: var(--primary-text);
+}
+
+button.danger {
+  border: none;
+  background: var(--danger-bg);
+  color: var(--danger-text);
+}
+
+textarea {
+  width: 100%;
+  height: calc(100vh - 82px);
+  border: none;
+  outline: none;
+  resize: none;
+  padding: 14px;
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: Consolas, "Courier New", monospace;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.status {
+  margin-left: auto;
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 600;
+}
